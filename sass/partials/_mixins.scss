@@ -1,5 +1,6 @@
 @mixin titleBig($color, $f-size, $font) {
   font-weight: 700;
+  padding: $padding-block-3;
   color: $color;
   font-size: $f-size;
   font-family: $font;
@@ -14,9 +15,11 @@
 
 @mixin buttons($font-color: white, $bgColor: black, $radius) {
   color: $font-color;
+  font-family: "Inter";
   background-color: $bgColor;
   border: none;
   border-radius: $radius;
+  pointer: cursor;
 }
 
 @mixin floating($b-radius: $size-3, $b-shadow: 0px 0px 24px -3px rgba(0, 0, 0, 0.75), $border: 1px solid black) {

@@ -4,7 +4,7 @@
 @import "./partials/font";
 @import "./partials/reset";
 @import "./partials/buttons";
-// @import "./partials/animations";
+@import "./partials/animations";
 
 header {
   .navBar {
@@ -17,6 +17,7 @@ header {
     li {
       display: inline-block;
       padding: $size-2;
+      font-family: "Inter";
     }
     a {
       text-decoration: none;
@@ -78,15 +79,4 @@ main {
 .img3,
 .img4 {
   @extend .img1;
-}
-
-@keyframes goIn {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
