@@ -27,3 +27,14 @@
   box-shadow: $b-shadow;
   border: $border;
 }
+
+@mixin grid($n-element) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  & > * {
+    padding: $padding-inline-2;
+    width: calc(100% / $n-element);
+  }
+}

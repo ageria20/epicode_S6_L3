@@ -10,7 +10,7 @@ header {
   .navBar {
     ul {
       list-style: none;
-      margin-top: $size-0;
+      padding: $padding-block-1;
       display: inline-flex;
       justify-content: space-between;
     }
@@ -34,7 +34,7 @@ main {
   .hero {
     background-color: $header-color;
     display: flex;
-    width: 75%;
+    width: 100%;
     margin-inline: auto;
     justify-content: space-between;
     padding: $size-3;
@@ -59,18 +59,12 @@ main {
 }
 
 .secContainer {
-  display: flex;
-  justify-content: space-around;
-  margin-inline: auto;
-  width: 75%;
-
-  padding: $size-3;
+  @include grid(2);
+  margin-inline: $margin-inline-auto;
 }
 
 .img1 {
   img {
-    width: 200px;
-    justify-content: space-between;
     @include floating($b-radius: $size-2, $border: none);
   }
 }
