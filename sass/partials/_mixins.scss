@@ -1,0 +1,26 @@
+@mixin titleBig($color, $f-size, $font) {
+  font-weight: 700;
+  color: $color;
+  font-size: $f-size;
+  font-family: $font;
+}
+
+@mixin description($color, $f-size, $font) {
+  font-weight: 500;
+  color: $color;
+  font-size: $f-size;
+  font-family: $font;
+}
+
+@mixin buttons($font-color: white, $bgColor: black, $radius) {
+  color: $font-color;
+  background-color: $bgColor;
+  border: none;
+  border-radius: $radius;
+}
+
+@mixin floating($b-radius: $size-3, $b-shadow: 0px 0px 24px -3px rgba(0, 0, 0, 0.75), $border: 1px solid black) {
+  border-radius: $b-radius;
+  box-shadow: $b-shadow;
+  border: $border;
+}

@@ -8,23 +8,58 @@
 
 header {
   .navBar {
-    background-color: $header-color;
+    ul {
+      list-style: none;
+      margin-top: $size-0;
+      display: inline-flex;
+      justify-content: space-between;
+    }
+    li {
+      display: inline-block;
+      padding: $size-2;
+    }
+    a {
+      text-decoration: none;
+    }
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: $size-5;
   }
+}
+
+.btn1 {
+  @include buttons($buttons-color, $first-btn-color, $size-5);
+  padding: $size-2;
+}
+
+.btn2 {
+  @include buttons($buttons-color, $second-btn-color, $size-5);
+  padding: $size-2;
+}
+
+.btn3 {
+  @include buttons($buttons-color, $third-btn-color, $size-5);
+  padding: $size-2;
 }
 
 main {
   .hero {
-    background-color: $bg-color-primary;
+    background-color: $header-color;
     display: flex;
+    width: 75%;
+    margin-inline: auto;
     justify-content: space-between;
     padding: $size-3;
 
     h1 {
-      font {
-        size: $size-5;
-        weight: $weight-bold;
-        color: $text-color;
-      }
+      @include titleBig($text-color-dark, $size-5, $title-font);
+      animation: goIn 2s linear;
+    }
+    p {
+      @include description($text-color-dark, $size-4, $title-font);
+      animation: goIn 2s linear;
     }
   }
 }
@@ -32,18 +67,25 @@ main {
 .heroImg {
   img {
     width: 500px;
+    animation: goIn 2s linear;
+    @include floating($b-radius: $size-1, $border: 1px solid $header-color);
   }
 }
 
 .secContainer {
   display: flex;
-  width: 100%;
+  justify-content: space-around;
+  margin-inline: auto;
+  width: 75%;
+
+  padding: $size-3;
 }
 
 .img1 {
   img {
     width: 200px;
     justify-content: space-between;
+    @include floating($b-radius: $size-2, $border: none);
   }
 }
 
@@ -51,4 +93,15 @@ main {
 .img3,
 .img4 {
   @extend .img1;
+}
+
+@keyframes goIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
