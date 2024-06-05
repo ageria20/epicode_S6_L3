@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: $size-0;
+  // le variabili SASS possono essere utilizzate direttamente senza particolari accorgimenti/strumenti
+  //   font-family: $sans-serif;
+
+  //   SASS permette di raggruppare le proprietà composte
+  font: {
+    size: $size-3;
+    weight: normal;
+  }
+}
