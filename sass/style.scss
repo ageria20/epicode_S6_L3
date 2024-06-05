@@ -29,21 +29,6 @@ header {
   }
 }
 
-.btn1 {
-  @include buttons($buttons-color, $first-btn-color, $size-5);
-  padding: $size-2;
-}
-
-.btn2 {
-  @include buttons($buttons-color, $second-btn-color, $size-5);
-  padding: $size-2;
-}
-
-.btn3 {
-  @include buttons($buttons-color, $third-btn-color, $size-5);
-  padding: $size-2;
-}
-
 main {
   .hero {
     background-color: $header-color;
